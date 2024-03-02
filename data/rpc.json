@@ -47,5 +47,12 @@
     ],
     "explorer": "https://starkscan.co/tx/",
     "token": "ETH"
+  },
+  "scroll": {
+    "rpc": [
+      "https://rpc.scroll.io"
+    ],
+    "explorer": "https://scrollscan.com/tx/",
+    "token": "ETH"
   }
 }

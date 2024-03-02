@@ -10,7 +10,7 @@ with open("data/rpc.json") as file:
     RPC = json.load(file)
 
 def open_wallets():
-    with open("data/wallets.txt", "r") as file:
+    with open("config/wallets.txt", "r") as file:
         return [row.strip() for row in file]
 
 async def check_balances(chain: str = "ethereum"):
@@ -23,4 +23,4 @@ async def check_balances(chain: str = "ethereum"):
         print(f"{wallet} -> {w3.from_wei(await w3.eth.get_balance(wallet), 'ether')} ETH")
 
 if __name__ == '__main__':
-     asyncio.run(check_balances())
+     asyncio.run(check_balances("zksync"))
